@@ -6,7 +6,7 @@ const useMoneda = (label, stateinitial, monedas) => {
      const seleccionarMoneda = () => (
                <div className="form-group">
                     <label htmlFor="moneda" className="text-uppercase font-weight-bolder">{label}</label>
-                    <select value={state} className="form-control bg-dark text-white" name="moneda" onChange={(e) => changeState(e.target.value)}>
+                    <select value={state} className="form-control form-control-lg bg-dark text-white" name="moneda" onChange={(e) => changeState(e.target.value)}>
                          <option value="" disabled>...Seleccionar</option>
                          {monedas.map((moneda, i) => <option key={i} value={moneda.value} >{moneda.name}</option>)}
                     </select>

@@ -5,8 +5,8 @@ const useCriptomoneda = (label, stateinitial, criptomonedas) => {
 
      const seleccionarCriptomoneda = () => (
           <div className="form-group">
-               <label htmlFor="criptomoneda" className="text-uppercase">{label}</label>
-               <select value={state} name="criptomoneda" className="form-control bg-dark text-white" onChange={(e) => changeState(e.target.value)}>
+               <label htmlFor="criptomoneda" className="text-uppercase font-weight-bolder">{label}</label>
+               <select value={state} name="criptomoneda" className="form-control form-control-lg bg-dark text-white" onChange={(e) => changeState(e.target.value)}>
                     <option value="" disabled>...Seleccionar</option>
                     {criptomonedas.map((criptomoneda, i) => <option key={i} value={criptomoneda.CoinInfo.Name}>{criptomoneda.CoinInfo.FullName}</option>)}
                </select>

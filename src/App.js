@@ -16,7 +16,7 @@ function App() {
       <section className="criptomoneda">
         <div className="container">
           <div className="row  align-items-center justify-content-center">
-            <div className="col-md-6">
+            <div className="col-md-4">
                 <img src={logo} alt="imagen cripto" className="img-fluid" />
             </div>
             <div className="col-md-6">
