@@ -15,7 +15,7 @@ function App() {
       <Header title="Calcular Valor Criptomoneda"></Header>
       <section className="criptomoneda">
         <div className="container">
-          <div className="row  align-items-center justify-content-center">
+          <div className="row justify-content-center">
             <div className="col-md-4">
                 <img src={logo} alt="imagen cripto" className="img-fluid" />
             </div>
