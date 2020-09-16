@@ -13,7 +13,7 @@ function App() {
   return (
     <Fragment>
       <Header title="Calcular Valor Criptomoneda"></Header>
-      <section className="criptomoneda">
+      <section className="criptomoneda py-3">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-md-4">
