@@ -1,25 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Fragment, useState} from 'react';
+import Header from './components/Header';
+import Formulario from './components/Formulario';
+import Spinner from './components/Spinner';
+import Resultados from './components/Resultados';
+import logo from './cryptomonedas.png'
+
 
 function App() {
+  const [resultados, changeResultados] = useState({
+  });
+  const [spinner, changeSpinner] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Header title="Calcular Valor Criptomoneda"></Header>
+      <section className="criptomoneda">
+        <div className="container">
+          <div className="row  align-items-center justify-content-center">
+            <div className="col-md-6">
+                <img src={logo} alt="imagen cripto" className="img-fluid" />
+            </div>
+            <div className="col-md-6">
+                <Formulario changeResultados={changeResultados} changeSpinner={changeSpinner}></Formulario>
+                {!spinner ? 
+                  <Resultados resultados={resultados}></Resultados>
+                  :
+                  <Spinner></Spinner>
+                }
+            </div>
+          </div>
+        </div>
+      </section>
+    </Fragment>
   );
 }
 
